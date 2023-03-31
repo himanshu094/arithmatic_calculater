@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <input type="text" id="txt1" placeholder="enter value"><br><br>
+
+    <input type="text" id="txt2" placeholder="enter another value"><br><br>
+
+    <input type="button" value="addition" onclick="call(addition)">
+    <input type="button" value="subtraction" onclick="call(subtraction)">
+    <input type="button" value="multiplication" onclick="call(multiplication)">
+    <input type="button" value="divide" onclick="call(divide)">
+    <input type="button" value="remainder" onclick="call(remainder)">
+    <div id="result"> </div>
+</body>
+
+<script>
+    // 'use strict'
+    // let  fun
+    // let tag=document.querySelectorAll("input")
+
+    // for(var i=0;i<tag.length;i++) 
+    //  tag[i].addEventListener("click",function() {
+    //         fun=this.value
+       
+    //    })
+       
+    function call(fn)
+    {       let a=txt1.value
+            let b=txt2.value
+                     
+        var ans=fn(a,b)
+        result.innerHTML=ans   
+    }
+
+    function addition(x,y) 
+    {
+        return (Number(x)+Number(y))       
+    }
+    function subtraction(x,y) 
+    {
+        return (x-y)       
+    }
+    function multiplication(x,y) 
+    {
+        return (x*y)        
+    }
+    function divide(x,y) 
+    {
+        return (x/y)        
+    }
+    function remainder(x,y) 
+    {
+        return (x%y)        
+    }
+                
+</script>
+</html>
